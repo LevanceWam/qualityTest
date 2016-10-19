@@ -1,0 +1,30 @@
+{
+  "name": "quality_test",
+  "version": "1.0.0",
+  "description": "utility tool",
+  "main": "src/util.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LevanceWam/qualityTest.git"
+  },
+  "author": "Vance Wamley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LevanceWam/qualityTest/issues"
+  },
+  "homepage": "https://github.com/LevanceWam/qualityTest#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "chai": "^3.5.0",
+    "expect": "^1.20.2",
+    "mocha": "^3.1.2",
+    "supertest": "^2.0.0",
+    "terminal-colors": "^0.1.4"
+  }
+}
