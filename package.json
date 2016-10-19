@@ -1,6 +1,6 @@
 {
   "name": "quality_test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "utility tool",
   "main": "src/util.js",
   "directories": {
