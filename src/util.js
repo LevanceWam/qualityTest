@@ -1,19 +1,23 @@
-exports.debug = (title, obj, data) => {
-  const fs = require('fs');
+exports.debug = (title, obj, status) => {
 
   const ts = new Date();
   const seperator = '\n____________________________________\n';
-  require('terminal-colors');
+  const require('terminal-colors');
 
-  const outputTERM = seperator.magenta + ' ' + JSON.stringify(obj) + ' ' + data + '\n'
-   + seperator.magenta + ' ' + ts;
-
-  const outputFILE = seperator + ' ' + JSON.stringify(obj) + ' ' +
-  data + '\n' + seperator + ' ' + ts;
   if (process.env.DEBUG) {
-    fs.appendFile('logs/util.log', outputFILE, (err) => {
-      if (err) throw err;
-      console.log(outputTERM);
-    });
+    let outputTERM;
+    if (status === 'error') {
+       outputTERM = seperator.red + ' ' + ts + '\n' + JSON.stringify(obj) + ' ' + seperator.red;
+       console.log(outputTERM);
+        // if console warn
+        } else if (status === 'warn') {
+        outputTERM = seperator.yellow + ' ' + ts + '\n' + JSON.stringify(obj) + ' ' + seperator.magenta;
+        console.log(outputTERM);
+        // if console log or undefined
+        } else {
+         outputTERM = seperator.green + ' ' + ts + '\n' + JSON.stringify(obj) + ' ' + seperator.green;
+         console.log(outputTERM);
+        // closes if statement
+        }
   }
 };
