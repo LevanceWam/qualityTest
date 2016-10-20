@@ -24,6 +24,3 @@ For the code you have 3 parameters  a title, a obj and data
 ```
 util.debug('title, obj, data');
 ```
-
-## Logging Files
-When using the taste tester it will create and write to a log file at the root of the project. You do need to have a logs folder in order for it to create the log file.
