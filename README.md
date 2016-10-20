@@ -1,26 +1,28 @@
 # qualityTest
-### Install Packages
 
+## Getting started
+
+### Install Package
 
 ```
-npm i quality_test
+npm install quality_test
 ```
-## How to use it
-First you are going to want to start in debug mode
+### Usage
+
+start server in debug mode
 
 ```
 DEBUG=true node src/server
 ```
 
-## Debugging
-When you debug you have to the path and the code to execute the code.
+### Debugging
 
-path:
+including package in file
 ```
 const util = require('quality_test');
 ```
-Code:
-For the code you have 3 parameters  a title, a obj and data
+
+For the code you have 3 parameters  a title, a obj and status. status should be set to warn, error, or log.
 ```
-util.debug('title, obj, data');
+util.debug('title', obj, 'status');
 ```
