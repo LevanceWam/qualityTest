@@ -7,3 +7,9 @@ describe('Time For a Taste Test', () => {
     done();
   });
 });
+
+describe('bumper', () => {
+  it('should return bumped version', () => {
+    log.bump('10.5.13', 'minor');
+  });
+});
