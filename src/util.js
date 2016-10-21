@@ -7,15 +7,6 @@ exports.debug = (title, obj, data) => {
 
   const outputTERM = seperator.magenta + ' ' + JSON.stringify(obj) + ' ' + data + '\n'
    + seperator.magenta + ' ' + ts;
-
-  const outputFILE = seperator + ' ' + JSON.stringify(obj) + ' ' +
-  data + '\n' + seperator + ' ' + ts;
-  if (process.env.DEBUG) {
-    fs.appendFile('logs/util.log', outputFILE, (err) => {
-      if (err) throw err;
-      console.log(outputTERM);
-    });
-  }
 };
 
 exports.bump = (version, type) => {

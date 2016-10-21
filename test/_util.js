@@ -10,6 +10,6 @@ describe('Time For a Taste Test', () => {
 
 describe('bumper', () => {
   it('should return bumped version', () => {
-    log.bump('10.5.13', 'minor');
+    util.bump('10.5.13', 'minor');
   });
 });
